@@ -1,0 +1,18 @@
+.nav
+  font-family: $title-font
+  text-transform: uppercase
+  line-height: 1
+  &__item
+    display: inline-block
+    font-size: 0
+    &--active, &:hover
+      .nav__link
+        background-color: #000
+        color: $banner-color
+
+  &__link
+    display: block
+    font-size: 18px
+    border-radius: 19px
+    padding: 16px 33px
+    transition: all 200ms

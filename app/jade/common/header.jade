@@ -1,2 +1,18 @@
 header.mainheader
-  h1 Hello!
+  .container
+    nav.nav
+      ul.nav__list
+        each item in ['Home', 'What I Do', 'My works', 'about', 'contact']
+          -if (item == "Home")
+            li.nav__item.nav__item--active
+              a(href="#").nav__link= item
+          -else
+            li.nav__item
+              a(href="#").nav__link= item
+    
+    .banner
+      .banner__item
+        h1.banner__title Tacos cardigan <br> truffaut Quanted!
+        .btn-wrap
+          a(href="#").btn.btn--banner See More
+          span.btn-lines
