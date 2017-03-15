@@ -1,31 +1,9 @@
-.icon {
-	display: inline-block;
-	width: 1em;
-	height: 1em;
-	fill: currentColor;
-}
-
-.icon-bubble {
-	font-size:(32/10)*1rem;
-	width:(32/32)*1em;
-}
-.icon-forward {
-	font-size:(32/10)*1rem;
-	width:(32/32)*1em;
-}
-.icon-home {
-	font-size:(32/10)*1rem;
-	width:(32/32)*1em;
-}
-.icon-music {
-	font-size:(32/10)*1rem;
-	width:(32/32)*1em;
-}
-.icon-play {
-	font-size:(32/10)*1rem;
-	width:(32/32)*1em;
-}
-.icon-reply {
-	font-size:(32/10)*1rem;
-	width:(32/32)*1em;
-}
+    $s-camera: 221px 0px -221px 0px 217px 125px 438px 428px 'sprite.png';
+    $s-fb: 146px 201px -146px -201px 78px 78px 438px 428px 'sprite.png';
+    $s-gpl: 239px 201px -239px -201px 78px 78px 438px 428px 'sprite.png';
+    $s-headphones: 0px 201px 0px -201px 131px 134px 438px 428px 'sprite.png';
+    $s-in: 332px 201px -332px -201px 78px 78px 438px 428px 'sprite.png';
+    $s-pt: 0px 350px 0px -350px 78px 78px 438px 428px 'sprite.png';
+    $s-screen: 0px 0px 0px 0px 206px 186px 438px 428px 'sprite.png';
+    $s-scroll: 186px 350px -186px -350px 31px 58px 438px 428px 'sprite.png';
+    $s-tw: 93px 350px -93px -350px 78px 78px 438px 428px 'sprite.png';

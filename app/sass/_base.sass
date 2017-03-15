@@ -69,6 +69,13 @@ a
 	&:hover, &:focus
 		text-decoration: none
 
+.ic
+	display: inline-block
+	&--scroll
+		height: 58px
+		width: 31px
+		+sprite($s-scroll)
+
 body
 	height: 100%
 	margin: 0
@@ -86,6 +93,7 @@ body
 
 .container
 	margin: 0 auto
+	position: relative
 	max-width: 1480px
 	width: 96%
 

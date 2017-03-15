@@ -1,6 +1,6 @@
 header.mainheader
   .container
-    nav.nav
+    nav.nav.mainheader__nav
       ul.nav__list
         each item in ['Home', 'What I Do', 'My works', 'about', 'contact']
           -if (item == "Home")
@@ -10,9 +10,15 @@ header.mainheader
             li.nav__item
               a(href="#").nav__link= item
     
-    .banner
-      .banner__item
-        h1.banner__title Tacos cardigan <br> truffaut Quanted!
-        .btn-wrap
-          a(href="#").btn.btn--banner See More
-          span.btn-lines
+  .banner
+    .banner__item
+      h1.banner__title Tacos cardigan <br> truffaut Quanted!
+      img(src="img/glass.png", alt="Glass").banner__image
+      .btn-wrap
+        a(href="#").btn.btn--banner See More
+        span.btn-lines
+        
+  span.ic.ic--scroll
+
+  svg.mainheader__line
+    line(stroke-dasharray="25, 20", x1="50%", y1="0", x2="50%", y2="100%", style="stroke:rgb(0,0,0);stroke-width:5")

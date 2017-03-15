@@ -1,8 +1,54 @@
 .mainheader
   height: 100vh
-  padding-top: 60px
   background-color: $banner-color
+  position: relative
+
+  &__nav
+    position: absolute
+    left: 0
+    top: 50px
+
+  &__line
+    position: absolute
+    left: 50%
+    transform: translate(-50%, 50%)
+    height: 250px
+    bottom: 0
+    z-index: 8
+
+  .ic--scroll
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 38px
+    cursor: pointer
+    z-index: 10
+    &:hover
+      + .mainheader__line
+        animation: dash 10s infinite linear
 
 .banner
+  height: 100%
   &__item
+    height: 100%
+    background-image: url(../img/header-bg2.jpg)
+    background-size: cover
+    background-position: center
     text-align: center
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+  &__image
+    margin-bottom: 55px
+
+  &__title
+    font-size: 60px
+    margin: 50px 0 60px
+    line-height: 1.2
+    letter-spacing: 3.5px
+
+@keyframes dash
+  to
+    stroke-dashoffset: 1000
