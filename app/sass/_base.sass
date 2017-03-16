@@ -75,6 +75,12 @@ a
 		height: 58px
 		width: 31px
 		+sprite($s-scroll)
+	&--headphones
+		+sprite($s-headphones)
+	&--screen
+		+sprite($s-screen)
+	&--camera
+		+sprite($s-camera)
 
 body
 	height: 100%
@@ -83,7 +89,7 @@ body
 	font-size: 16px
 	min-width: 320px
 	position: relative
-	line-height: 1.75
+	line-height: 1.6
 	font-family: $default-font
 	color: $font-color
 	overflow-x: hidden
@@ -101,6 +107,41 @@ body
 	display: block
 	max-width: 100%
 	height: auto
+
+section
+	padding: 120px 0
+
+.section-header
+	margin-bottom: 100px
+	.section-title, .section-descr
+		display: inline-block
+		vertical-align: top
+		width: 40%
+	.section-title
+		margin-right: 15%
+		text-align: right
+
+.section-title
+	font-size: 77px
+	line-height: 1
+	white-space: nowrap
+	letter-spacing: 4px
+	margin: 0
+	position: relative
+	&::after, &::before
+		position: absolute
+		content: ''
+		width: 483px
+		height: 5px
+		background-color: #000
+		right: 5%
+		bottom: -20px
+	&::after
+		right: -5%
+		bottom: -30px
+
+.section-descr
+	font-size: 18px
 
 // .hidden
 //   display: none

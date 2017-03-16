@@ -1,0 +1,18 @@
+.what
+  background-color: $bg-color
+  height: 100vh
+
+  &__features-title
+    margin-top: 100px
+    position: relative
+    &::after,&::before
+      position: absolute
+      content: ''
+      top: -40px
+      left: 50%
+      transform: translateX(-50%)
+      height: 25px
+      width: 5px
+      background-color: #000
+    &::before
+      top: -80px
