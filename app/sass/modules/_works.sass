@@ -1,8 +1,11 @@
 .portfolio
   background-color: #fef9fd
+  .container:last-of-type
+    text-align: center
 
   &__list
     +clearfix
+    margin-bottom: 68px
   &__item
     width: 25%
     position: relative
@@ -21,4 +24,43 @@
     bottom: 0
     right: 0
     top: 0
-    background-color: pink
+    background-repeat: no-repeat
+    background-size: cover
+    &:hover
+      &::after
+        opacity: 0.5
+      span
+        opacity: 1
+        transform: translate(-50%, -50%) scale(1)
+
+    &::after
+      content: ''
+      display: block
+      +coverdiv
+      background-color: #fff
+      opacity: 0
+      transition: all 200ms
+
+    span
+      display: block
+      +size(30px)
+      border: 4px solid #000
+      border-radius: 50%
+      position: relative
+      top: 50%
+      left: 50%
+      transition: all 200ms
+      opacity: 0
+      z-index: 5
+      transform: translate(-50%, -50%) scale(2)
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        bottom: 0
+        right: -77%
+        width: 15px
+        height: 4px
+        transform: rotate(35deg)
+        transform-origin: 0 0
+        background-color: #000

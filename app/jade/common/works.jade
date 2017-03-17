@@ -5,7 +5,12 @@ section.portfolio
       h2.section-title My works
       
   ul.portfolio__list
-    li.portfolio__item
-      a(href="#").portfolio__view item
-    li.portfolio__item
-      a(href="#").portfolio__view item
+    each item in ['pr1.jpg', 'pr2.jpg', 'pr3.jpg', 'pr4.jpg']
+      li.portfolio__item
+        a(href="#", style="background-image: url(img/" + item +")").portfolio__view
+          span
+          
+  .container
+    .btn-wrap
+      a(href="#").btn.btn--white Load More
+      span.btn-lines
