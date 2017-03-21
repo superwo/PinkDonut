@@ -8,11 +8,78 @@
     display: flex
     flex-direction: column
 
+  &__chart
+    margin: 15px auto 0
+    .pie
+      position: relative
+      +size(220px)
+      border-radius: 50%
+      border: 4px solid #000
+      background: #fcf7fb
+      background-image: radial-gradient(circle at center center, #fff 62%, #000 62%, #000 65%, #d7d2d6 65% )
+      // animation-delay: -75s
+      box-shadow: inset 0px 0px 0px 8px #d7d2d6, inset 0px 0px 0px 12px #000
+
+      &::before, &__percent
+        content: ''
+        display: block
+        position: absolute
+        top: -4px
+        height: calc(100% + 8px)
+        width: calc(50% + 4px)
+      &__percent, &__pr-line
+        left: 50%
+        border-radius: 0 100% 100% 0 / 50%
+        border: inherit
+        border-color: #f3eef2
+        border-left: none
+        background-color: inherit
+        transform-origin: left
+        animation: spin 50s linear infinite, bg 100s step-end infinite
+        animation-play-state: paused
+        animation-delay: inherit
+      &::before
+        right: 50%
+        border-radius: 100% 0 0 100% / 50%
+        border: 4px solid #f3eef2
+        border-right: none
+        background-color: inherit
+
+      &__f-line, &__f-line::after
+        position: absolute
+        z-index: 12
+        height: 61px
+        width: 4px
+        background-color: #000
+        left: 50%
+        top: -25px
+      &__f-line::after
+        content: ''
+        left: -8px
+        top: 20px
+
+      &__percent::before, &__percent::after
+        content: ''
+        position: absolute
+        z-index: 12
+        height: 61px
+        width: 4px
+        background-color: #000
+        bottom: -25px
+        left: 0
+        animation: bf 100s step-end infinite
+        animation-play-state: paused
+        animation-delay: inherit
+      &__percent::after
+        bottom: -6px
+        left: -8px
+
   &__title
     font-size: 18px
     margin-bottom: 14px
   &__text
     line-height: 24px
+    padding: 0 15px
 
   &__descr
     min-height: 200px
@@ -20,3 +87,22 @@
     margin-top: auto
     margin-left: auto
     margin-right: auto
+
+
+
+@keyframes bf
+  0%
+    transform: translate(8px, -181px)
+  50%
+    transform: translate(0, 0px)
+
+@keyframes spin
+  to
+    transform: rotate(0.5turn)
+
+
+@keyframes bg
+  50%
+    background: #fff
+    border-color: #000
+    background-image: radial-gradient(circle at center left, #fff 62%, #000 62%, #000 65%, #d7d2d6 65% )
