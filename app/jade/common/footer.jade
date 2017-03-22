@@ -1,2 +1,45 @@
 footer.mainfooter
-  p footer
+  .container
+    .mainfooter__contacts
+      .mainfooter__left
+        form(action="#").mainfooter__form
+          label(for="name") Name:
+          input(type="text", id="name", required)
+          label(for="email") Email:
+          input(type="email", id="email", required)
+          label(for="message") Message:
+          textarea(id="message", required)
+          .mainfooter__form-btn
+            .btn-wrap
+              button(type="submit").btn.btn--form Send
+              span.btn-lines
+      .mainfooter__right
+        h2.section-title Contact
+        ul.socials
+          each value in ['fb', 'tw', 'gpl', 'pt', 'in']
+            li.socials__item
+              a(href="#").socials__link
+                span(class="ic ic--" + value)
+        
+        .contacts
+          .contacts__item
+            h5.contacts__header Address:
+            span.contacts__text 9114 Bridge Street , <br>Hillsboro, OR 97124
+        .contacts
+          .contacts__item
+            h5.contacts__header Phone:
+            span.contacts__text +48 202 - 555 - 0114
+          .contacts__item
+            h5.contacts__header Email:
+            span.contacts__text contact@yoursite.com
+    .mainfooter__bottom-line
+      .mainfooter__copyright Copyright 2015 © by Anna Dadej
+      nav.nav.mainfooter__nav
+        ul.nav__list
+          each item in ['Home', 'What I Do', 'My works', 'about', 'contact']
+            -if (item == "Home")
+              li.nav__item.nav__item--active
+                a(href="#").nav__link= item
+            -else
+              li.nav__item
+                a(href="#").nav__link= item
