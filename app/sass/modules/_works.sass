@@ -1,15 +1,22 @@
 .portfolio
   background-color: #fef9fd
+  +laptop-max
+    padding-top: rem(50px)
+  +tablets-max
+    .section-header
+      margin-bottom: 0
   .container:last-of-type
     text-align: center
 
   &__list
     +clearfix
-    margin-bottom: 68px
+    margin-bottom: rem(68px)
   &__item
     width: 25%
     position: relative
     float: left
+    +tablets-max
+      width: 50%
 
     &::before
       content: ''

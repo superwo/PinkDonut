@@ -31,6 +31,13 @@ html
 	height: 100%
 	margin: 0
 	padding: 0
+	font-size: 16px
+	+desktop-max
+		font-size: 15px
+	+laptop-max
+		font-size: 14px
+	+tablets-max
+		font-size: 12px
 	box-sizing: border-box
 *, *::before, *::after
 	box-sizing: inherit
@@ -41,13 +48,13 @@ h1, h2, h3, h4, h5, h6
 	font-weight: 400
 
 h1
-  font-size: 40px
+  font-size: rem(40px)
 
 
 // Basic Text Style
 
 p
-  margin: 0 0 20px 0
+  margin: 0 0 rem(20px) 0
 
 em
   font-style: italic
@@ -74,6 +81,8 @@ a
 
 .ic
 	display: inline-block
+	+tablets-max
+		transform: scale(.7)
 	&--scroll
 		height: 58px
 		width: 31px
@@ -122,43 +131,68 @@ body
 	height: auto
 
 section
-	padding: 120px 0 100px
+	padding: rem(120px) 0 rem(100px)
+	+tablets-max
+		padding: rem(100px) 0 rem(50px)
 
 .section-header
-	margin-bottom: 100px
+	margin-bottom: rem(100px)
+	+tablets-max
+		margin-bottom: rem(60px)
 
 	&--portfolio
 		.section-descr
 			margin-left: 15%
+			+tablets-max
+				margin-left: 0
 		.section-title
 			margin-right: 0!important
 			text-align: left!important
+			+tablets-max
+				text-align: center!important
 	.section-title, .section-descr
 		display: inline-block
 		vertical-align: top
 		width: 40%
+		+tablets-max
+			width: 100%
 	.section-title
 		margin-right: 15%
 		text-align: right
+		+tablets-max
+			margin-right: 0
+			text-align: center
+			margin-bottom: rem(100px)
 
 .section-title
-	font-size: 77px
+	font-size: rem(77px)
 	line-height: 1
 	white-space: nowrap
 	letter-spacing: 4px
 	margin: 0
 	position: relative
+	+desktop-max
+		font-size: rem(50px)
 	&::after, &::before
 		position: absolute
 		content: ''
-		width: 483px
+		width: rem(483px)
+		+desktop-max
+			width: rem(380px)
+		+laptop-max
+			width: rem(300px)
 		height: 5px
 		background-color: #000
 		right: 5%
-		bottom: -20px
+		bottom: rem(-20px)
+		+tablets-max
+			right: 55%
+			transform: translateX(50%)
 	&::after
 		right: -5%
-		bottom: -30px
+		bottom: rem(-30px)
+		+tablets-max
+			right: 45%
 
 .section-descr
 	font-size: 18px

@@ -9,17 +9,28 @@
     // vertical-align: top
   &__left
     margin-right: 3%
+    +tablets-max
+      order: 2
 
   &__contacts
     display: flex
     margin-bottom: rem(100px)
+    +tablets-max
+      flex-direction: column
 
   &__right
+    +tablets-max
+      order: 1
+      display: flex
+      flex-direction: column
+      align-items: center
     .section-title
       top: rem(-93px)
       display: inline-block
     .socials
       margin-bottom: rem(95px)
+      +tablets-max
+        margin-bottom: rem(50px)
 
   &__form
     &-btn
@@ -43,16 +54,26 @@
       font-size: 18px
       text-transform: uppercase
       margin-bottom: 5px
+      +tablets-max
+        font-size: 16px
 
   &__bottom-line
     display: flex
     justify-content: space-between
     align-items: center
+    +desktop-max
+      flex-direction: column
   &__copyright
     font-size: rem(18px)
     font-family: $title-font
     font-weight: 400
+    +desktop-max
+      order: 2
+      font-size: rem(16px)
   &__nav
+    +desktop-max
+      order: 1
+      margin-bottom: rem(30px)
     .nav__item
       &--active, &:hover
         .nav__link
@@ -82,8 +103,12 @@
     float: left
     margin-right: 125px
     margin-bottom: rem(45px)
+    +phones-max
+      float: none
+      margin-right: auto
     &:last-child
       margin-right: 0
+
   &__header
     font-size: rem(18px)
     margin: 0 0 rem(5px)

@@ -2,11 +2,16 @@
   display: flex
   justify-content: space-between
   text-align: center
+  +tablets-max
+    flex-direction: column
+    align-items: center
   &__item
     max-width: 445px
     flex: 1
     display: flex
     flex-direction: column
+    +tablets-max
+      margin-bottom: rem(50px)
 
   &__chart
     margin: 15px auto 0
@@ -19,6 +24,9 @@
       background-image: radial-gradient(circle at center center, #fff 62%, #000 62%, #000 65%, #d7d2d6 65% )
       // animation-delay: -75s
       box-shadow: inset 0px 0px 0px 8px #d7d2d6, inset 0px 0px 0px 12px #000
+      +laptop-max
+        transform: scale(0.8)
+
 
       &::before, &__percent
         content: ''

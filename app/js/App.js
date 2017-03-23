@@ -11,3 +11,7 @@ $percent.each(function(e) {
   $(this).parent('.pie').attr('style', 'animation-delay: -'+percent+'s');
   $($percentText[e]).text(percent + '%');
 });
+
+$(document).ready(function() {
+  $('.features__descr').matchHeight();
+});
