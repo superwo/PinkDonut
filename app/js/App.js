@@ -16,12 +16,39 @@ $(document).ready(function() {
   $('.features__descr').matchHeight();
 
   $(".toggle-nav").click(function() {
-  $(this).toggleClass("on");
-  $(".nav__list").slideToggle(300, function() {
-    if($(this).css('display') === 'none') {
-      $(this).removeAttr('style');
-    }
+    $(this).toggleClass("on");
+    $(".nav__list").slideToggle(300, function() {
+      if($(this).css('display') === 'none') {
+        $(this).removeAttr('style');
+      }
+    });
+    return false;
   });
-  return false;
+
+
+  //reveal elements on scroll
+  revealItems($('.features__item'), '65%')
+
 });
-});
+
+
+function revealItems(els, percent) {
+  hideInitialy();
+  createWaypoints();
+
+  function hideInitialy() {
+    els.addClass('reveal-item');
+  }
+  function createWaypoints() {
+    els.each(function() {
+      var currentItem = this;
+      new Waypoint({
+        element: currentItem,
+        handler: function() {
+          $(currentItem).addClass('reveal-item--is-visible');
+        },
+        offset: percent
+      });
+    });
+  }
+}
