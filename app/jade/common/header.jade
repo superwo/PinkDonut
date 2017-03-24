@@ -1,14 +1,16 @@
 header.mainheader
   .container
     nav.nav.mainheader__nav
+      .toggle-nav
+        span
       ul.nav__list
-        each item in ['Home', 'What I Do', 'My works', 'about', 'contact']
+        each index, item in {'Home': '/', 'What I Do': '#what', 'My works': '#portfolio', 'about': '#about', 'contact': '#contacts'}
           -if (item == "Home")
             li.nav__item.nav__item--active
-              a(href="#").nav__link= item
+              a(href=index).nav__link= item
           -else
             li.nav__item
-              a(href="#").nav__link= item
+              a(href=index).nav__link= item
     
   .banner
     .banner__item

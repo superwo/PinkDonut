@@ -71,10 +71,20 @@
       order: 2
       font-size: rem(16px)
   &__nav
+    +phones-max
+      width: 100%
     +desktop-max
       order: 1
       margin-bottom: rem(30px)
     .nav__item
+      margin: 0
+      +phones-max
+        display: block
+        text-align: center
+      .nav__link
+        +tablets-max
+          font-size: rem(16px)
+          padding: 0.8rem 1.1rem
       &--active, &:hover
         .nav__link
           color: #d2eae3

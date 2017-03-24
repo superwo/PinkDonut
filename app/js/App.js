@@ -14,4 +14,14 @@ $percent.each(function(e) {
 
 $(document).ready(function() {
   $('.features__descr').matchHeight();
+
+  $(".toggle-nav").click(function() {
+  $(this).toggleClass("on");
+  $(".nav__list").slideToggle(300, function() {
+    if($(this).css('display') === 'none') {
+      $(this).removeAttr('style');
+    }
+  });
+  return false;
+});
 });

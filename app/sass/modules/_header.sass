@@ -1,5 +1,6 @@
 .mainheader
   height: 100vh
+  min-height: 700px
   background-color: $banner-color
   position: relative
 
@@ -7,6 +8,21 @@
     position: absolute
     left: 0
     top: rem(50px)
+    width: 100%
+    .nav__list
+      +tablets-max
+        display: none
+        width: 100%
+        background-color: rgba($accent-color, .95)
+        padding-bottom: 50px
+        border-radius: 19px
+        .nav__item
+          display: block
+          text-align: center
+          margin: 0 auto
+  .toggle-nav
+    +tablets-max
+      display: block
 
   &__line
     position: absolute
@@ -15,6 +31,12 @@
     height: rem(350px)
     bottom: 0
     z-index: 8
+    +tablets-max
+      height: rem(200px)
+      bottom: 47px
+    +phones-max
+      height: rem(250px)
+      bottom: 80px
 
   .ic--scroll
     position: absolute
@@ -23,6 +45,12 @@
     bottom: 38px
     cursor: pointer
     z-index: 10
+    +laptop-max
+      bottom: 20px
+    +tablets-max
+      bottom: 15px
+    +phones-max
+      bottom: 60px
     &:hover
       + .mainheader__line
         animation: dash 10s infinite linear
@@ -49,6 +77,9 @@
     margin: rem(50px) 0 rem(60px)
     line-height: 1.2
     letter-spacing: rem(3.5px)
+    +phones-max
+      font-size: rem(40px)
+      margin-top: -70px
 
 @keyframes dash
   to

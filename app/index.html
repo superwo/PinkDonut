@@ -26,12 +26,13 @@
       <header class="mainheader">
         <div class="container">
           <nav class="nav mainheader__nav">
+            <div class="toggle-nav"><span></span></div>
             <ul class="nav__list">
-              <li class="nav__item nav__item--active"><a class="nav__link" href="#">Home</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">What I Do</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">My works</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">about</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">contact</a></li>
+              <li class="nav__item nav__item--active"><a class="nav__link" href="/">Home</a></li>
+              <li class="nav__item"><a class="nav__link" href="#what">What I Do</a></li>
+              <li class="nav__item"><a class="nav__link" href="#portfolio">My works</a></li>
+              <li class="nav__item"><a class="nav__link" href="#about">about</a></li>
+              <li class="nav__item"><a class="nav__link" href="#contacts">contact</a></li>
             </ul>
           </nav>
         </div>
@@ -46,7 +47,7 @@
         </svg>
       </header>
       <main class="maincontent"> 
-        <section class="what">
+        <section class="what" id="what">
           <div class="container">
             <div class="section-header">
               <h2 class="section-title">What I Do</h2>
@@ -74,7 +75,7 @@
             </ul>
           </div>
         </section>
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
           <div class="container">
             <div class="section-header section-header--portfolio">
               <p class="section-descr"></p>
@@ -91,7 +92,7 @@
             <div class="btn-wrap"><a class="btn btn--white" href="#">Load More</a><span class="btn-lines"></span></div>
           </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
           <div class="container">
             <div class="section-header"> 
               <h2 class="section-title">About Me</h2>
@@ -139,7 +140,7 @@
         </section>
         <div class="hidden"></div>
       </main>
-      <footer class="mainfooter">
+      <footer class="mainfooter" id="contacts">
         <div class="container">
           <div class="mainfooter__contacts">
             <div class="mainfooter__left">
@@ -199,5 +200,6 @@
   </body>
   <script src="libs/jquery.min.js"></script>
   <script src="libs/eqHight.js"></script>
+  <script src="libs/waypoints.min.js"></script>
   <script src="js/scripts.min.js"></script>
 </html>
