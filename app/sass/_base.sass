@@ -32,6 +32,7 @@ html
 	margin: 0
 	padding: 0
 	font-size: 16px
+	overflow-x: hidden
 	+desktop-max
 		font-size: 15px
 	+laptop-max
@@ -114,7 +115,7 @@ body
 	line-height: 1.6
 	font-family: $default-font
 	color: $font-color
-	overflow-x: hidden
+
 
 .wrapper
 	position: relative
@@ -204,6 +205,13 @@ section
 	&--is-visible
 		opacity: 1
 		transform: scale(1)
+
+
+.loader
+	text-align: center
+	position: relative
+	top: -30px
+	display: none
 
 // .hidden
 //   display: none

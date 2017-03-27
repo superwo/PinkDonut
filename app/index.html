@@ -41,7 +41,7 @@
             <h1 class="banner__title">Tacos cardigan <br> truffaut Quanted!</h1><img class="banner__image" src="img/glass.png" alt="Glass">
             <div class="btn-wrap"><a class="btn btn--banner" href="#">See More</a><span class="btn-lines"></span></div>
           </div>
-        </div><span class="ic ic--scroll"></span>
+        </div><a href="#what" id="mainheaderScroll"><span class="ic ic--scroll"></span></a>
         <svg class="mainheader__line">
           <line stroke-dasharray="25, 20" x1="50%" y1="0" x2="50%" y2="100%" style="stroke:rgb(0,0,0);stroke-width:5;"></line>
         </svg>
@@ -53,7 +53,7 @@
               <h2 class="section-title">What I Do</h2>
               <p class="section-descr">Fingerstache green juice semiotics quinoa, truffaut letterpress wolf photo booth ugh biodiesel mumblecore brunch. Meh austin vinyl banh mi, gluten-free chillwave scenester kombucha street art. Before they sold out lumbersexual chillwave, cold-pressed mumblecore beard pickled letterpress normcore crucifix.</p>
             </div>
-            <ul class="features">
+            <ul class="features what__features">
               <li class="features__item"><span class="ic ic--headphones"></span>
                 <div class="features__descr">
                   <h4 class="features__title what__features-title">Ultracies</h4>
@@ -83,13 +83,20 @@
             </div>
           </div>
           <ul class="portfolio__list">
-            <li class="portfolio__item"><a class="portfolio__view" href="#" style="background-image: url(img/pr1.jpg);"><span></span></a></li>
-            <li class="portfolio__item"><a class="portfolio__view" href="#" style="background-image: url(img/pr2.jpg);"><span></span></a></li>
-            <li class="portfolio__item"><a class="portfolio__view" href="#" style="background-image: url(img/pr3.jpg);"><span></span></a></li>
-            <li class="portfolio__item"><a class="portfolio__view" href="#" style="background-image: url(img/pr4.jpg);"><span></span></a></li>
+            <li class="portfolio__item"><a class="portfolio__view" href="img/pr1.jpg" style="background-image: url(img/pr1.jpg);"><span></span></a></li>
+            <li class="portfolio__item"><a class="portfolio__view" href="img/pr2.jpg" style="background-image: url(img/pr2.jpg);"><span></span></a></li>
+            <li class="portfolio__item"><a class="portfolio__view" href="img/pr3.jpg" style="background-image: url(img/pr3.jpg);"><span></span></a></li>
+            <li class="portfolio__item"><a class="portfolio__view" href="img/pr4.jpg" style="background-image: url(img/pr4.jpg);"><span></span></a></li>
           </ul>
+          <div class="loader">
+            <svg id="loader-1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewbox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+              <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+                <animatetransform attributetype="xml" attributename="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatcount="indefinite"></animatetransform>
+              </path>
+            </svg>
+          </div>
           <div class="container">
-            <div class="btn-wrap"><a class="btn btn--white" href="#">Load More</a><span class="btn-lines"></span></div>
+            <div class="btn-wrap"><a class="btn btn--white" href="#" id="loadPortfolio">Load More</a><span class="btn-lines"></span></div>
           </div>
         </section>
         <section class="about" id="about">
@@ -186,11 +193,11 @@
             <div class="mainfooter__copyright">Copyright 2015 © by Anna Dadej</div>
             <nav class="nav mainfooter__nav">
               <ul class="nav__list">
-                <li class="nav__item nav__item--active"><a class="nav__link" href="#">Home</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">What I Do</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">My works</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">about</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">contact</a></li>
+                <li class="nav__item nav__item--active"><a class="nav__link" href="/">Home</a></li>
+                <li class="nav__item"><a class="nav__link" href="#what">What I Do</a></li>
+                <li class="nav__item"><a class="nav__link" href="#portfolio">My works</a></li>
+                <li class="nav__item"><a class="nav__link" href="#about">about</a></li>
+                <li class="nav__item"><a class="nav__link" href="#contacts">contact</a></li>
               </ul>
             </nav>
           </div>
@@ -201,5 +208,7 @@
   <script src="libs/jquery.min.js"></script>
   <script src="libs/eqHight.js"></script>
   <script src="libs/waypoints.min.js"></script>
+  <script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="libs/jquery.smooth-scroll.min.js"></script>
   <script src="js/scripts.min.js"></script>
 </html>
