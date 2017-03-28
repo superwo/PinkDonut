@@ -82,11 +82,9 @@ a
 
 .ic
 	display: inline-block
-	+tablets-max
-		transform: scale(.7)
 	&--scroll
 		height: 58px
-		width: 31px
+		width: 32px
 		+sprite($s-scroll)
 	&--headphones
 		+sprite($s-headphones)
@@ -132,11 +130,12 @@ body
 	height: auto
 
 section
-	padding: rem(120px) 0 rem(100px)
+	padding: rem(120px) 0 rem(80px)
 	+tablets-max
 		padding: rem(100px) 0 rem(50px)
 
 .section-header
+	position: relative
 	margin-bottom: rem(100px)
 	+tablets-max
 		margin-bottom: rem(60px)
@@ -195,6 +194,18 @@ section
 		+tablets-max
 			right: 45%
 
+.section-line
+	position: absolute
+	left: 50%
+	transform: translate(-50%, 15%)
+	height: rem(200px)
+	top: -122px
+	z-index: 8
+	+tablets-max
+		height: rem(130px)
+	+phones-max
+		height: rem(250px)
+		bottom: 80px
 .section-descr
 	font-size: 18px
 

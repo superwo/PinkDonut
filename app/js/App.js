@@ -36,8 +36,8 @@ function showChart() {
           //alert('finished');
         }
       });
+      waypoint.destroy();
     }
-
   });
 }
 
@@ -45,7 +45,9 @@ $(document).ready(function() {
 
   //smooth scrolling
   $('.nav__link').smoothScroll();
-  $('#mainheaderScroll').smoothScroll();
+  $('#mainheaderScroll, .section-link').smoothScroll({
+    offset: 70
+  });
 
   // equal heights
   $('.features__descr').matchHeight();
@@ -63,7 +65,9 @@ $(document).ready(function() {
 
 
   //reveal elements on scroll
-  revealItems($('.what__features .features__item'), '65%')
+  revealItems($('.what__features .features__item'), '65%');
+  revealItems($('.section-title'), '90%');
+  revealItems($('.section-descr'), '70%');
 
 
   $('.portfolio__list').magnificPopup({
@@ -101,6 +105,31 @@ $(document).ready(function() {
 
    // Pie Charts
    showChart();
+
+  //moving Icons
+  // init controller
+  var controller = new ScrollMagic.Controller();
+
+  // create a scene
+  new ScrollMagic.Scene({
+          duration: 230,    // the scene should last for a scroll distance of 100px
+          offset: 150        // start this scene after scrolling for 50px
+      })
+      .setPin("#mainheaderIc") // pins the element for the the scene's duration
+      .addTo(controller); // assign the scene to the controller
+
+    // Change the href of #mainheaderScroll
+    var mainScroll = $('#mainheaderScroll');
+    var theLink = new Waypoint({
+      element: document.getElementById('what'),
+      handler: function(direction) {
+        if(direction == "down"){
+          mainScroll.attr('href', '#portfolio');
+        } else {
+          mainScroll.attr('href', '#what');
+        }
+      }
+    });
 });
 
 

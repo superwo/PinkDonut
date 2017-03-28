@@ -41,7 +41,7 @@
             <h1 class="banner__title">Tacos cardigan <br> truffaut Quanted!</h1><img class="banner__image" src="img/glass.png" alt="Glass">
             <div class="btn-wrap"><a class="btn btn--banner" href="#">See More</a><span class="btn-lines"></span></div>
           </div>
-        </div><a href="#what" id="mainheaderScroll"><span class="ic ic--scroll"></span></a>
+        </div><a href="#what" id="mainheaderScroll"><span class="ic ic--scroll" id="mainheaderIc"></span></a>
         <svg class="mainheader__line">
           <line stroke-dasharray="25, 20" x1="50%" y1="0" x2="50%" y2="100%" style="stroke:rgb(0,0,0);stroke-width:5;"></line>
         </svg>
@@ -78,7 +78,10 @@
         <section class="portfolio" id="portfolio">
           <div class="container">
             <div class="section-header section-header--portfolio">
-              <p class="section-descr"></p>
+              <p class="section-descr"></p><a class="section-link" href="#about"><span class="ic ic--scroll"></span></a>
+              <svg class="section-line">
+                <line stroke-dasharray="25, 20" x1="50%" y1="0" x2="50%" y2="100%" style="stroke:rgb(0,0,0);stroke-width:5;"></line>
+              </svg>
               <h2 class="section-title">My works</h2>
             </div>
           </div>
@@ -102,10 +105,13 @@
         <section class="about" id="about">
           <div class="container">
             <div class="section-header"> 
-              <h2 class="section-title">About Me</h2>
+              <h2 class="section-title">About Me</h2><a class="section-link" href="#contacts"><span class="ic ic--scroll"></span></a>
+              <svg class="section-line">
+                <line stroke-dasharray="25, 20" x1="50%" y1="0" x2="50%" y2="100%" style="stroke:rgb(0,0,0);stroke-width:5;"></line>
+              </svg>
               <p class="section-descr">Fingerstache green juice semiotics quinoa, truffaut letterpress wolf photo booth ugh biodiesel mumblecore brunch. Meh austin vinyl banh mi, gluten-free chillwave scenester kombucha street art. Before they sold out lumbersexual chillwave, cold-pressed mumblecore beard pickled letterpress normcore crucifix.</p>
             </div>
-            <ul class="features">
+            <ul class="features" id="featuresCharts">
               <li class="features__item">
                 <div class="features__chart">
                   <div class="pie">
@@ -210,5 +216,6 @@
   <script src="libs/waypoints.min.js"></script>
   <script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
   <script src="libs/jquery.smooth-scroll.min.js"></script>
+  <script src="libs/scrollmagic/minified/ScrollMagic.min.js"></script>
   <script src="js/scripts.min.js"></script>
 </html>

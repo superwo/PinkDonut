@@ -38,23 +38,31 @@
       height: rem(250px)
       bottom: 80px
 
+.ic--scroll
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+  top: 23px
+  // bottom: 38px
+  cursor: pointer
+  z-index: 10
+  +laptop-max
+    top: -23px
+  +tablets-max
+    display: none
+    // bottom: 15px
+  +phones-max
+    display: none
+
+#mainheaderScroll
   .ic--scroll
-    position: absolute
-    left: 50%
-    transform: translateX(-50%)
+    top: auto
     bottom: 38px
-    cursor: pointer
-    z-index: 10
-    +laptop-max
-      bottom: 20px
-    +tablets-max
-      bottom: 15px
-    +phones-max
-      bottom: 60px
-  #mainheaderScroll
-    &:hover
-      + .mainheader__line
-        animation: dash 10s infinite linear
+
+#mainheaderScroll, .section-link
+  &:hover
+    + .mainheader__line, + .section-line
+      animation: dash 10s infinite linear
 
 .banner
   height: 100%
