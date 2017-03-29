@@ -13,6 +13,7 @@
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
     <!-- Template Basic Images End-->
+    <link rel="stylesheet" href="libs/loader/fakeLoader.css">
     <link rel="stylesheet" href="css/main.min.css">
     <!-- Chrome, Firefox OS and Opera-->
     <meta name="theme-color" content="#000">
@@ -22,6 +23,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#000">
   </head>
   <body>
+    <div id="fakeLoader"></div>
     <div class="wrapper">
       <header class="mainheader">
         <div class="container">
@@ -37,9 +39,31 @@
           </nav>
         </div>
         <div class="banner">
-          <div class="banner__item">
+          <ul class="banner__navigation-list">
+            <li class="banner__navigation-item active"></li>
+            <li class="banner__navigation-item"></li>
+            <li class="banner__navigation-item"></li>
+          </ul>
+          <div class="banner__item active">
             <h1 class="banner__title">Tacos cardigan <br> truffaut Quanted!</h1><img class="banner__image" src="img/glass.png" alt="Glass">
-            <div class="btn-wrap"><a class="btn btn--banner" href="#">See More</a><span class="btn-lines"></span></div>
+            <div class="banner__popup mfp-hide" id="first__popup"><img src="img/glass.png" alt="Glass">
+              <p>Tacos cardigan  truffaut cardigan  truffaut cardigan  truffaut Quanted! Tacos cardigan  truffaut cardigan  truffaut cardigan  truffaut Quanted! Tacos cardigan  truffaut cardigan  truffaut cardigan  truffaut Quanted! Tacos cardigan  truffaut cardigan  truffaut cardigan  truffaut Quanted!</p>
+            </div>
+            <div class="btn-wrap"><a class="btn btn--banner" href="#first__popup">See More</a><span class="btn-lines"></span></div>
+          </div>
+          <div class="banner__item">
+            <h1 class="banner__title">Tacos Quanted!</h1><img class="banner__image" src="img/glass.png" alt="Glass">
+            <div class="banner__popup mfp-hide" id="second__popup"><img src="img/glass.png" alt="Glass">
+              <p>Tacos cardigan  truffaut cardigan  truffaut cardigan  truffaut Quanted! Tacos cardigan  truffaut cardigan  truffaut cardigan  truffaut Quanted! </p>
+            </div>
+            <div class="btn-wrap"><a class="btn btn--banner" href="#second__popup">See More</a><span class="btn-lines"></span></div>
+          </div>
+          <div class="banner__item">
+            <h1 class="banner__title">Tacos cardigan!</h1><img class="banner__image" src="img/glass.png" alt="Glass">
+            <div class="banner__popup mfp-hide" id="third__popup"><img src="img/glass.png" alt="Glass">
+              <p>Tacos cardigan  truffaut cardigan  truffaut cardigan  truffaut Quanted! Tacos cardigan  truffaut cardigan  truffaut cardigan  truffaut Quanted! </p>
+            </div>
+            <div class="btn-wrap"><a class="btn btn--banner" href="#third__popup">See More</a><span class="btn-lines"></span></div>
           </div>
         </div><a href="#what" id="mainheaderScroll"><span class="ic ic--scroll" id="mainheaderIc"></span></a>
         <svg class="mainheader__line">
@@ -210,12 +234,14 @@
         </div>
       </footer>
     </div>
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/loader/fakeLoader.min.js"></script>
+    <script type="text/javascript">$("#fakeLoader").fakeLoader({ timeToHide:1200, zIndex:"999", spinner:"spinner1", bgColor:"#F6CD01" });</script>
+    <script src="libs/eqHight.js"></script>
+    <script src="libs/waypoints.min.js"></script>
+    <script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="libs/jquery.smooth-scroll.min.js"></script>
+    <script src="libs/scrollmagic/minified/ScrollMagic.min.js"></script>
+    <script src="js/scripts.min.js"></script>
   </body>
-  <script src="libs/jquery.min.js"></script>
-  <script src="libs/eqHight.js"></script>
-  <script src="libs/waypoints.min.js"></script>
-  <script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
-  <script src="libs/jquery.smooth-scroll.min.js"></script>
-  <script src="libs/scrollmagic/minified/ScrollMagic.min.js"></script>
-  <script src="js/scripts.min.js"></script>
 </html>

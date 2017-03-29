@@ -13,11 +13,36 @@ header.mainheader
               a(href=index).nav__link= item
     
   .banner
-    .banner__item
+    ul.banner__navigation-list
+      li.banner__navigation-item.active
+      li.banner__navigation-item
+      li.banner__navigation-item
+    .banner__item.active
       h1.banner__title Tacos cardigan <br> truffaut Quanted!
       img(src="img/glass.png", alt="Glass").banner__image
+      .banner__popup.mfp-hide#first__popup
+        img(src="img/glass.png", alt="Glass")
+        p Tacos cardigan  truffaut cardigan  truffaut cardigan  truffaut Quanted! Tacos cardigan  truffaut cardigan  truffaut cardigan  truffaut Quanted! Tacos cardigan  truffaut cardigan  truffaut cardigan  truffaut Quanted! Tacos cardigan  truffaut cardigan  truffaut cardigan  truffaut Quanted!
       .btn-wrap
-        a(href="#").btn.btn--banner See More
+        a(href="#first__popup").btn.btn--banner See More
+        span.btn-lines
+    .banner__item
+      h1.banner__title Tacos Quanted!
+      img(src="img/glass.png", alt="Glass").banner__image
+      .banner__popup.mfp-hide#second__popup
+        img(src="img/glass.png", alt="Glass")
+        p Tacos cardigan  truffaut cardigan  truffaut cardigan  truffaut Quanted! Tacos cardigan  truffaut cardigan  truffaut cardigan  truffaut Quanted! 
+      .btn-wrap
+        a(href="#second__popup").btn.btn--banner See More
+        span.btn-lines
+    .banner__item
+      h1.banner__title Tacos cardigan!
+      img(src="img/glass.png", alt="Glass").banner__image
+      .banner__popup.mfp-hide#third__popup
+        img(src="img/glass.png", alt="Glass")
+        p Tacos cardigan  truffaut cardigan  truffaut cardigan  truffaut Quanted! Tacos cardigan  truffaut cardigan  truffaut cardigan  truffaut Quanted! 
+      .btn-wrap
+        a(href="#third__popup").btn.btn--banner See More
         span.btn-lines
         
   a(href="#what")#mainheaderScroll

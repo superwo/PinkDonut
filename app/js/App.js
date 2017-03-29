@@ -67,15 +67,31 @@ $(document).ready(function() {
   //reveal elements on scroll
   revealItems($('.what__features .features__item'), '65%');
   revealItems($('.section-title'), '90%');
-  revealItems($('.section-descr'), '70%');
+  // revealItems($('.section-descr'), '70%');
 
 
+  // Popup
   $('.portfolio__list').magnificPopup({
     delegate: 'a',
     type: 'image'
     // other options
   });
+  $('.btn--banner').magnificPopup({
+    type: 'inline'
+  });
 
+  // //Carousel
+  $('.banner__navigation-item').on('click', function(e) {
+    var $this = $(this),
+        i = $this.index(),
+        $bannerItem = $('.banner__item');
+    $('.banner__navigation-item').removeClass('active');
+    $this.addClass('active');
+    $bannerItem.removeClass('active');
+    $($bannerItem[i]).addClass('active');
+  });
+
+  // ajax loading
   $('#loadPortfolio').on('click', function(e) {
     e.preventDefault();
     $('.loader').show();
@@ -109,14 +125,23 @@ $(document).ready(function() {
   //moving Icons
   // init controller
   var controller = new ScrollMagic.Controller();
-
   // create a scene
-  new ScrollMagic.Scene({
+  var scene = new ScrollMagic.Scene({
           duration: 230,    // the scene should last for a scroll distance of 100px
           offset: 150        // start this scene after scrolling for 50px
       })
       .setPin("#mainheaderIc") // pins the element for the the scene's duration
       .addTo(controller); // assign the scene to the controller
+      function setSceneDuration() {
+        if($(window).width() < 770) {
+          scene.duration(90);
+        }
+        else {
+          scene.duration(230);
+        }
+      }
+      setSceneDuration();
+      $(window).on('resize', setSceneDuration);
 
     // Change the href of #mainheaderScroll
     var mainScroll = $('#mainheaderScroll');

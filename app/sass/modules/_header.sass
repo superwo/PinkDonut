@@ -6,6 +6,7 @@
 
   &__nav
     position: absolute
+    z-index: 10
     left: 0
     top: rem(50px)
     width: 100%
@@ -48,11 +49,10 @@
   z-index: 10
   +laptop-max
     top: -23px
-  +tablets-max
-    display: none
-    // bottom: 15px
-  +phones-max
-    display: none
+  &:not(#mainheaderIc)
+    +tablets-max
+      display: none
+
 
 #mainheaderScroll
   .ic--scroll
@@ -66,16 +66,46 @@
 
 .banner
   height: 100%
+  width: 100vw
+  &__navigation-list
+    position: absolute
+    z-index: 10
+    top: 50%
+    transform: translateY(-50%)
+    right: 5%
+  &__navigation-item
+    display: block
+    +size(19px)
+    border: 6px solid #fdf5e4
+    margin-bottom: 10px
+    border-radius: 50%
+    opacity: 0.4
+    transition: opacity 250ms ease-in-out
+    cursor: pointer
+    &.active, &:hover
+      opacity: 1
+    &:last-child
+      margin-bottom: 0
   &__item
     height: 100%
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
     background-image: url(../img/header-bg2.jpg)
     background-size: cover
     background-position: center
     text-align: center
+    transform: translateX(100vw)
     display: flex
     flex-direction: column
     align-items: center
     justify-content: center
+    opacity: 0
+    &.active
+      transition: all 200ms ease-in-out
+      transform: translateX(0)
+      opacity: 1
 
   &__image
     margin-bottom: 55px
@@ -89,6 +119,22 @@
     +phones-max
       font-size: rem(40px)
       margin-top: -70px
+  &__popup
+    position: relative
+    background-color: $banner-color
+    padding: 40px
+    width: auto
+    max-width: 700px
+    margin: 20px auto
+    font-family: "open-regular", sans-serif
+    p
+      margin: 0
+      margin-top: 30px
+      font-size: 18px
+    img
+      max-width: 100%
+      margin: 0 auto
+      display: block
 
 @keyframes dash
   to

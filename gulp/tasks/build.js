@@ -20,6 +20,10 @@ gulp.task('build', ['removedist', 'jade', 'imagemin', 'sass', 'scripts'], functi
 		'app/fonts/**/*']
 		).pipe(gulp.dest('dist/fonts'));
 
+  var buildLibs = gulp.src([
+    'app/libs/**/*'
+  ]).pipe(gulp.dest('dist/libs'));
+
 });
 
 gulp.task('removedist', function() { return del.sync('dist'); });

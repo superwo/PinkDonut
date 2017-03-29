@@ -20,7 +20,7 @@ html(lang='en')
     link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
     link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
     // Template Basic Images End
-    
+    link(rel="stylesheet", href="libs/loader/fakeLoader.css")
     link(rel='stylesheet', href='css/main.min.css')
     
     // Chrome, Firefox OS and Opera
@@ -31,6 +31,7 @@ html(lang='en')
     meta(name="apple-mobile-web-app-status-bar-style", content="#000")
 
   body
+    #fakeLoader
     .wrapper
       include ../common/header.jade
       main.maincontent  
@@ -38,11 +39,15 @@ html(lang='en')
           .hidden
         
       include ../common/footer.jade
+      
+
   
-  script(src='libs/jquery.min.js')
-  script(src='libs/eqHight.js')
-  script(src='libs/waypoints.min.js')
-  script(src='libs/magnific-popup/jquery.magnific-popup.min.js')
-  script(src='libs/jquery.smooth-scroll.min.js')
-  script(src='libs/scrollmagic/minified/ScrollMagic.min.js')
-  script(src='js/scripts.min.js')
+    script(src='libs/jquery.min.js')
+    script(src='libs/loader/fakeLoader.min.js')
+    script(type='text/javascript') $("#fakeLoader").fakeLoader({ timeToHide:1200, zIndex:"999", spinner:"spinner1", bgColor:"#F6CD01" });
+    script(src='libs/eqHight.js')
+    script(src='libs/waypoints.min.js')
+    script(src='libs/magnific-popup/jquery.magnific-popup.min.js')
+    script(src='libs/jquery.smooth-scroll.min.js')
+    script(src='libs/scrollmagic/minified/ScrollMagic.min.js')
+    script(src='js/scripts.min.js')

@@ -8,9 +8,14 @@
     // width: 48%
     // vertical-align: top
   &__left
-    margin-right: 3%
+    margin-right: 13%
+    +desktop-max
+      margin-right: 8%
+    +laptop-max
+      margin-right: 3%
     +tablets-max
       order: 2
+      margin-right: 0
 
   &__contacts
     display: flex
