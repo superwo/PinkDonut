@@ -32,12 +32,14 @@
     height: rem(350px)
     bottom: 0
     z-index: 8
+    +desktop-max
+      bottom: 10px
     +tablets-max
-      height: rem(200px)
-      bottom: 47px
+      height: rem(210px)
+      bottom: 71px
     +phones-max
       height: rem(250px)
-      bottom: 80px
+      bottom: 104px
 
 .ic--scroll
   position: absolute
@@ -48,7 +50,7 @@
   cursor: pointer
   z-index: 10
   +laptop-max
-    top: -23px
+    top: -30px
   &:not(#mainheaderIc)
     +tablets-max
       display: none
